@@ -15,7 +15,7 @@ def inflation_profitshare():
 
     profitshare_list = []
     for Pistar in Pistar_monthly_list:
-        from calvo-ss_func import calvobasicss
+        from calvo_ss_func import calvobasicss
         PstaroverP, MC, NU = calvobasicss(0.96 ** (1/12), 0.087, 8, Pistar)
 
         profitshare_list.append(100 * (1 - MC * NU))
